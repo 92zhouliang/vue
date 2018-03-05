@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import DealTable from '@/components/DealTable'
-import ShopTable from '@/components/ShopTable'
-
+import routes from '@router/routes'
 
 
 Vue.use(Router)
@@ -13,17 +10,17 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: ()=>import('@/components/HelloWorld')
     },
     {
       path: '/deal-table',
       name: 'DealTable',
-      component: DealTable
+      component: ()=>import('@/components/DealTable')
     },
     {
       path: '/shop-table',
       name: 'ShopTable',
-      component: ShopTable
+      component: ()=> import('@/components/ShopTable')
     }
     
   ]
