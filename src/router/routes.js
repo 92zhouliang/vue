@@ -1,20 +1,20 @@
-// 不作为Main组件的子页面展示的页面单独写，如下
+// 不作为Main组件的子页面展示的页面单独写
 export const loginRouter = {
-    path: '/login',
+    path: '/',
     name: 'login',
     meta: {
         title: 'Login - 登录'
     },
-    component: () => import('@/views/login.vue')
+    component: () => import('@/components/login.vue')
 };
 
 export const page404 = {
-    path: '/*',
+    path: '/404',
     name: 'error-404',
     meta: {
         title: '404-页面不存在'
     },
-    component: () => import('@/views/error-page/404.vue')
+    component: () => import('@/components/404.vue')
 };
 export const otherRouter={
     path: '/home',
@@ -22,20 +22,20 @@ export const otherRouter={
     meta: {
         title: '主应用'
     },
-    component: ()=>import('@/views/error-page/Main.vue'),
+    component: ()=>import('@/components/Main'),
     children:[
         {
-            path: '/home',
+            path: '/',
             name: 'HelloWorld',
             component: ()=>import('@/components/HelloWorld')
           },
           {
-            path: '/deal-table',
+            path: 'deal-table',
             name: 'DealTable',
             component: ()=>import('@/components/DealTable')
           },
           {
-            path: '/shop-table',
+            path: 'shop-table',
             name: 'ShopTable',
             component: ()=> import('@/components/ShopTable')
           }

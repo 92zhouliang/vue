@@ -2,7 +2,7 @@
   <div>
     <DealTable/>
     <br/>
-    <router-link to='shop-table'>前往商品购买页面</router-link>
+    <router-link to='/shop-table'>前往商品购买页面</router-link>
   </div>
 </template>
 
