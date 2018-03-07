@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Message } from 'iview'
 
 axios.defaults.timeout = 5000;
-axios.defaults.baseURL ='';//请求url配置
+axios.defaults.baseURL ='https://www.easy-mock.com/mock/5a333294f7414a24bc73a447';//请求url配置
 /**
  *todo主要 统一错误编码code，给出消息提示
 */

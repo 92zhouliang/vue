@@ -68,7 +68,7 @@
                                     },
                                     on:{
                                         click:()=>{
-                                            console.log(params)
+                                            this.add();
                                         }
                                     }
                                 },'Add')
@@ -109,6 +109,16 @@
             },
             remove (index) {
                 this.data6.splice(index, 1);
+            },
+            add () {
+                let rangeAge=parseInt(Math.random(10)*50);
+                let dataParam={
+                        name: 'Joe Black',
+                        age: rangeAge,
+                        address: 'Sydney No. 1 Lake Park'
+                    };
+                this.data6.push(dataParam);
+                // this.data6.splice(index, 1);
             }
         }
     }

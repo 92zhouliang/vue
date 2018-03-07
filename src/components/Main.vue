@@ -116,7 +116,12 @@
 </template>
 <script>
     export default {
-        name:'main'
+        name:'main',
+        mounted(){
+            this.$fetch('/example/tableList').then((response)=>{
+                console.log(response);
+            })
+        }
         
     }
 </script>
